@@ -9,18 +9,18 @@ import java.util.List;
 
 
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class CreateOrderDetails {
+@AllArgsConstructor
+public class CreateOrder {
 
     private Long userId;
     private Long userAddressId;
-    private List<CreateOrderDetail> createOrderDetails;
+    private List<OrderDetail> orderDetails;
 
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class CreateOrderDetail {
+    public static class OrderDetail {
         private Long productId;
         private Integer productCount;
         private Long productPrice;
