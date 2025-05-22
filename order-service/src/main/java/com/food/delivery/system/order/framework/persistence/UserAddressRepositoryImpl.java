@@ -14,6 +14,11 @@ public class UserAddressRepositoryImpl implements UserAddressRepository {
     private final UserAddressJpaRepository userAddressJpaRepository;
 
     @Override
+    public UserAddress save(UserAddress userAddress) {
+        return userAddressJpaRepository.save(userAddress);
+    }
+
+    @Override
     public Optional<UserAddress> findById(Long userAddressId) {
         return userAddressJpaRepository.findById(userAddressId);
     }

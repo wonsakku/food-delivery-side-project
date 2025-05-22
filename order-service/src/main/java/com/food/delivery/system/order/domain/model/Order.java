@@ -1,8 +1,6 @@
 package com.food.delivery.system.order.domain.model;
 
-import com.food.delivery.system.order.application.ports.input.dto.CreateOrder;
 import com.food.delivery.system.order.domain.exception.OrderDomainException;
-import com.food.delivery.system.order.valueobject.Money;
 import com.food.delivery.system.order.valueobject.OrderStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -62,7 +60,8 @@ public class Order {
                 .orderItems(orderItems)
                 .build();
 
-        orderItems.forEach(orderItem -> orderItem.setOrder(order));
+        // 양방향 연관관계 설정, 영속성 전이시키기
+//        orderItems.forEach(orderItem -> orderItem.setOrder(order));
         return order;
     }
 

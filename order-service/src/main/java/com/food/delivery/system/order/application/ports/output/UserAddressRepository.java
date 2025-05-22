@@ -7,5 +7,7 @@ import java.util.Optional;
 
 public interface UserAddressRepository {
 
+    UserAddress save(UserAddress userAddress);
+
     Optional<UserAddress> findById(Long userAddressId);
 }

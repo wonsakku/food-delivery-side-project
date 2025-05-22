@@ -33,7 +33,6 @@ public class OrderServiceImpl implements OrderService {
         UserAddress userAddress = userAddressRepository.findById(dto.getUserAddressId())
                 .orElseThrow(() -> new OrderDomainException("존재하지 않는 주소입니다."));
 
-
         List<OrderItem> orderItems = dto.getOrderDetails().stream()
                 .map(detail -> OrderItem.create(detail.getProductId(), detail.getProductCount(), BigDecimal.valueOf(detail.getProductPrice())))
                 .toList();

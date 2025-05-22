@@ -26,4 +26,13 @@ public class UserAddress {
     @Column
     private boolean deleted;
 
+    public static UserAddress newAddress(String addressBasic, String addressDetail, String description){
+        return UserAddress.builder()
+                .addressBasic(addressBasic)
+                .addressDetail(addressDetail)
+                .description(description)
+                .deleted(false)
+                .build();
+    }
+
 }

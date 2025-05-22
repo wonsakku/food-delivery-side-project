@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb  # 인메모리 DB (파일 DB 원하면 jdbc:h2:file:~/test 로 변경)
+    url: jdbc:h2:mem:test  # 인메모리 DB (파일 DB 원하면 jdbc:h2:file:~/test 로 변경)
     driver-class-name: org.h2.Driver
     username: sa
     password:
